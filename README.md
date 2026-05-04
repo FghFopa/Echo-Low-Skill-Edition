@@ -1,4 +1,4 @@
-### Echo
+# Echo
 ## Low Skill Edition
 
 Легкая версия Echo для тех кто просто хочет играть!
