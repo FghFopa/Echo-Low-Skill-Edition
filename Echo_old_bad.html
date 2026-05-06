@@ -89,7 +89,7 @@
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let globalVolume = localStorage.getItem('echo_vol') !== null ? parseFloat(localStorage.getItem('echo_vol')) : 0.5;
 let ctrl = localStorage.getItem('echo_ctrl') || 'joy';
-let coins = parseInt(localStorage.getItem('echo_coins')) || 1000;
+let coins = parseInt(localStorage.getItem('echo_coins')) || 100000;
 let owned = JSON.parse(localStorage.getItem('echo_owned')) || ['def'];
 let currentHeroId = localStorage.getItem('echo_hero') || 'def';
 
@@ -123,7 +123,7 @@ function updateVol(v) {
 // --- ГЕРОИ ---
 const heroes = [
     { id: 'def', name: 'ВЫЖИВШИЙ', price: 0, s: 6.5, noise: 500, cd: 5000, color: '#0f0', shape:'circle' },
-    { id: 'sur_blue', name: 'РАЗВЕДЧИК', price: 0, s: 7.2, noise: 500, cd: 3500, color: '#33f', shape:'circle' },
+    { id: 'sur_blue', name: 'РАЗВЕДЧИК', price: 0, s: 70, noise: 500, cd: 3500, color: '#33f', shape:'circle' },
     { id: 'scout', name: 'СКАУТ', price: 0, s: 9.0, noise: 500, cd: 4000, color: '#0ff', shape:'square' },
     { id: 'eng', name: 'ТЕХНИК', price: 0, s: 5.5, noise: 500, cd: 1500, color: '#f0f', shape:'rhombus' },
     { id: 'ghost', name: 'ПРИЗРАК', price: 0, s: 5.0, noise: 500, isGhost: true, cd: 5000, color: '#fff', shape:'triangle' },
@@ -317,7 +317,7 @@ function exitToMenu() {
 function showCreepyText() {
     if(!gameActive || isPaused) return;
     const el = document.getElementById('creepy-text');
-    el.innerText = ["ОНО ТЕБЯ ВИДИТ", "БЕГИ", "НЕ ОБОРАЧИВАЙСЯ", "ОНО БЛИЗКО", "Я ВИЖУ ТВОЙ СВЕТ"][Math.floor(Math.random()*5)];
+    el.innerText = ["ОНО ЗДЕСЬ", "ВЗЛОМКА НЕ ПОМОЖЕТ", "НЕ ОБОРАЧИВАЙСЯ", "ОНО БЛИЗКО", "МИНУТА ПОШЛА"][Math.floor(Math.random()*5)];
     el.style.opacity = 0.8;
     playSound(40, 'sine', 1, 0.2);
     setTimeout(() => { el.style.opacity = 0; }, 2000);
