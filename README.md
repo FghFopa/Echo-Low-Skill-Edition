@@ -5,4 +5,4 @@
 
 Установка как в оригинале: скачать html файл и запустить в браузере.
 
-Оригинальная версия: (нажать сюда) [https://github.com/rodiowa1/Echo-Defentive-Edition] 
+Оригинальная версия: [нажать сюда](https://github.com/rodiowa1/Echo-Defentive-Edition) 
